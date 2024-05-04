@@ -1,0 +1,35 @@
+.comments__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(56, 55, 53);
+    border: 1px solid black;
+    border-radius: 8px;
+    height: 48px;
+    width: 400px;
+    padding: 16px;
+    margin: 8px;
+}
+
+input {
+    width: 200px;
+    padding: 16px;
+    font-size: 16px;
+
+}
+
+.input__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-item {
+    margin: 0 4px;
+}
+
+.comment__text {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+}
