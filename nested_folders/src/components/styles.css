@@ -1,0 +1,36 @@
+.folders__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    padding: 8px;
+    border: 1px solid;
+    border-radius: 8px;
+    background-color: rgb(58, 58, 58);
+    margin: 8px 0;
+    font-weight: 600;
+}
+
+.btn-item {
+    background-color: transparent;
+    text-decoration: none;
+    border-style: none;
+}
+
+.folders__show {
+    display: flex;
+    flex-direction: column;
+    padding-left: 24px;
+}
+
+.folders__none{
+    display: none;
+}
+
+input {
+    margin: 8px 0;
+    width: 200px;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 600;
+}
