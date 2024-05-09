@@ -5,7 +5,7 @@ import { items } from '../brandItems';
 interface BrandItem {
 	name: string;
 	category: string;
-  }
+}
 
 const MultiFilters: React.FC = () => {
 	const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
@@ -15,10 +15,11 @@ const MultiFilters: React.FC = () => {
 
 	useEffect(() => {
 		if (selectedCategories.length > 0) {
-			const filteredItems = selectedCategories.flatMap((category) =>
-				items.filter((item) => item.category === category)
-			);
-			setFilteredItems(filteredItems);
+			const filteredItems = selectedCategories.map((category) => {
+				let temp = items.filter((item) =>  item.category === category)
+				return temp
+			})
+			setFilteredItems(filteredItems.flat());
 		} else {
 			setFilteredItems(items);
 		}
@@ -26,7 +27,9 @@ const MultiFilters: React.FC = () => {
 
 	const handleCategorySelection = (category: string) => {
 		if (selectedCategories.includes(category)) {
-			const updatedCategories = selectedCategories.filter((c) => c !== category);
+			const updatedCategories = selectedCategories.filter(
+				(c) => c !== category
+			);
 			setSelectedCategories(updatedCategories);
 		} else {
 			setSelectedCategories((prevCategories) => [...prevCategories, category]);
@@ -35,18 +38,20 @@ const MultiFilters: React.FC = () => {
 
 	return (
 		<div className="container">
-			<div className="brands_container">
+			<div className="category_container">
 				{brandCategories.map((category: string, idx: number) => (
 					<div
 						key={idx}
-						className={`brands ${selectedCategories.includes(category) ? 'active' : ''}`}
+						className={`category_items ${
+							selectedCategories.includes(category) ? 'active' : ''
+						}`}
 						onClick={() => handleCategorySelection(category)}
 					>
 						{category}
 					</div>
 				))}
 			</div>
-			<div className="brand_item_container">
+			<div className="filtered_items_container">
 				{filteredItems.map((item: BrandItem, idx: number) => (
 					<div className="brand_items" key={idx}>
 						<span style={{ padding: '16px' }}>{item.name}</span>
