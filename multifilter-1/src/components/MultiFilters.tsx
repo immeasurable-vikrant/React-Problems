@@ -28,7 +28,7 @@ const MultiFilters: React.FC = () => {
 	const handleCategorySelection = (category: string) => {
 		if (selectedCategories.includes(category)) {
 			const updatedCategories = selectedCategories.filter(
-				(c) => c !== category
+				(selectedCategory) => selectedCategory !== category
 			);
 			setSelectedCategories(updatedCategories);
 		} else {
