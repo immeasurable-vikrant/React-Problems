@@ -1,0 +1,14 @@
+.car-brand {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    cursor: pointer;
+}
+
+.car-name-container {
+    padding-left: 2rem;
+}
+
+.car-name{
+    cursor: pointer;
+}
