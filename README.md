@@ -13,7 +13,7 @@
 ## 12. Tabs & Stock App (Medium) - Asked in "Upstox" Interview
 ## 13. Dark Mode (Medium)
 ## 14. Deck of Cards (Medium)
-## 15. Todo list with Undo functionality (Medium) - Asked in "StarTree" Startup Interview
+## 15. Todo list with Undo functionality (Medium-Hard) - Asked in "StarTree" Startup Interview
 ## 16. MUI Chips (Easy)
 ## 17. Progress Bar (1) (Easy)
 ## 18. Progress Bar (2) (Medium) - Asked in "Uber" Interview
